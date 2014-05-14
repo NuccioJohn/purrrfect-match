@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= link_to "Home", root_path %>
+<%= link_to "About", about_path %>
 <%= yield %>
-
+Designed and Developed by <%= link_to "Buildit Interactive", "http://builditinteractive.com/" %>
 </body>
 </html>
