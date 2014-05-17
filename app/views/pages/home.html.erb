@@ -4,8 +4,13 @@
 <div class="jumbotron center">
 		<h1>Welcome to Purrrfect Match!</h1>
 		<h3>The Nations #1 Cat Dating Site</h3>
+
+	<% if user_signed_in? %>
+		Welcome Member! Your now a Cool Cat!
+	<% else %>
 	<p>
-		<%= link_to "Log in", "#", class: "btn btn-primary btn-lg" %>
-		<%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg" %>
+		<%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg" %>
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</p>
+	<% end %>
 </div>
